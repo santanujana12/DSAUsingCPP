@@ -1,4 +1,5 @@
-#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
 
 struct Node {
   int data;
@@ -35,22 +36,10 @@ bool findPalindrome(Node *head) {
     return true;
 
   Node *middle = findMiddleNode(head);
-  // For odd length, middle is the exact middle. For even, it's the start of
-  // second half. Actually standard slow/fast finds: 1->2->2->1. Slow at 2nd
-  // '2'. 1->2->3->2->1. Slow at '3'.
-
-  // We should reverse from middle (inclusive or next?).
-  // Java code: Node secondHalf = middle; Node reversed =
-  // reverseLinkedList(secondHalf); This reverses the second half OF THE
-  // ORIGINAL LIST. This modifies the list structure. If we reverse starting
-  // from middle, the first half points to middle. And middle now points to
-  // prev... Let's stick to the logic provided.
-
   Node *secondHalf = middle;
   Node *reversed = reverseLinkedList(secondHalf);
   Node *curr = head;
-  Node *tempReversed = reversed; // Keep head of reversed to restore later if
-                                 // needed (not done in java code)
+  Node *tempReversed = reversed;
 
   while (tempReversed != nullptr) {
     if (curr->data != tempReversed->data) {
@@ -80,10 +69,10 @@ void addNode(Node *&head, int val) {
 // Helper to print
 void printLinkedList(Node *head) {
   while (head) {
-    std::cout << head->data << " ";
+    cout << head->data << " ";
     head = head->next;
   }
-  std::cout << std::endl;
+  cout << endl;
 }
 
 int main() {
@@ -94,6 +83,6 @@ int main() {
   addNode(head, 1);
 
   printLinkedList(head);
-  std::cout << std::boolalpha << isPalindrome(head) << std::endl;
+  cout << boolalpha << isPalindrome(head) << endl;
   return 0;
 }
