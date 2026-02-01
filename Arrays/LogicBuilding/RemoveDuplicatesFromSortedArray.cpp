@@ -1,8 +1,7 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
+using namespace std;
 
-int removeDuplicates(std::vector<int> &nums) {
-
+int removeDuplicates(vector<int> &nums) {
   if (nums.empty()) {
     return 0;
   }
@@ -23,13 +22,13 @@ int removeDuplicates(std::vector<int> &nums) {
 }
 
 int main() {
-  std::vector<int> nums = {-30, -30, 0, 0, 10, 20, 30, 30};
+  vector<int> nums = {-30, -30, 0, 0, 10, 20, 30, 30};
 
   int noDupCount = removeDuplicates(nums);
 
   for (int i = 0; i < noDupCount; i++) {
-    std::cout << nums[i] << " ";
+    cout << nums[i] << " ";
   }
-  std::cout << std::endl;
+  cout << endl;
   return 0;
 }
