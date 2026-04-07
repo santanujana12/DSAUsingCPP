@@ -21,5 +21,5 @@ int rob(vector<int> &nums)
 int main()
 {
     vector<int> nums = {2, 7, 9, 3, 1};
-    cout << rob(nums) << endl; // Output: 4 (rob 1 and 3)
+    cout << rob(nums) << endl;
 }
