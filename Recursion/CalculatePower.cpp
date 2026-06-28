@@ -1,4 +1,5 @@
-#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
 
 double myPow(double x, int n) {
     if(n <= 0) {
@@ -10,6 +11,6 @@ double myPow(double x, int n) {
 int main() {
     double x = 3.0;
     int n = 4;
-    std::cout << myPow(x, n) << std::endl;
+    cout << myPow(x, n) << endl;
     return 0;
 }
