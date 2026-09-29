@@ -3,7 +3,7 @@
 #include <climits>
 
 int main() {
-    std::vector<int> arr = {0, 3, 5, 2, 7, 9};
+    vector<int> arr = {0, 3, 5, 2, 7, 9};
     int n = arr.size();
     int largest = INT_MIN;
     int second_largest = INT_MIN;
